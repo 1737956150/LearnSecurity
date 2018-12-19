@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.105.220.224:3306/security?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+  session:
+    store-type: none
+#security:
+#  basic:
+#    enabled: false
+server:
+  port: 8080

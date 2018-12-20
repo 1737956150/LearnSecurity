@@ -11,3 +11,9 @@ spring:
 #    enabled: false
 server:
   port: 8080
+
+#zzg:
+#  security:
+#    browser:
+#      loginPage: /zzg-demoLogin.html
+#      loginType: REDIRECT

@@ -3,6 +3,7 @@ package com.zzg.authentication;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zzg.properties.LoginType;
 import com.zzg.properties.SecurityProperties;
+import com.zzg.support.SimpleResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +44,7 @@ public class MyAuthenticationFailureHandler extends SimpleUrlAuthenticationFailu
         if(LoginType.JSON.equals(securityProperties.getBrowser().getLoginType())){
             httpServletResponse.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
             httpServletResponse.setContentType("application/json;charset=UTF-8");
-            httpServletResponse.getWriter().write(objectMapper.writeValueAsString(e));
+            httpServletResponse.getWriter().write(objectMapper.writeValueAsString(new SimpleResponse(e.getMessage())));
         }else{
             super.onAuthenticationFailure(httpServletRequest,httpServletResponse,e);
         }

@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://39.105.220.224:3306/security?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://118.31.74.225:3306/rw?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
     username: root
-    password: root
+    password: cisdom
   session:
     store-type: none
 #security:
@@ -12,8 +12,24 @@ spring:
 server:
   port: 8080
 
+# 配置登录页面以及登录方式
 #zzg:
 #  security:
 #    browser:
 #      loginPage: /zzg-demoLogin.html
 #      loginType: REDIRECT
+
+# 配置图形验证码的宽/高/数/过期时间
+zzg:
+  security:
+    code:
+      image:
+        width: 67
+        height: 23
+        length: 4
+        expireIn: 60
+        url: /user/*,/me
+    sms:
+      legth: 6
+      expireIn: 60
+      url: /m1

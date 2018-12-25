@@ -1,5 +1,7 @@
 package com.zzg.validate.code.sms;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @classname DefaultSmsCodeSender
  * @desc TODO

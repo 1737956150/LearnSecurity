@@ -28,7 +28,7 @@ zzg:
         height: 23
         length: 4
         expireIn: 60
-        url: /user/*,/me
+        url: /user/*
     sms:
       legth: 6
       expireIn: 60

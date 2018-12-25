@@ -1,6 +1,7 @@
 package com.zzg.validate.code;
 
 import com.zzg.properties.SecurityProperties;
+import com.zzg.validate.code.image.ImageCondeGenerator;
 import com.zzg.validate.code.sms.DefaultSmsCodeSender;
 import com.zzg.validate.code.sms.SmsCodeSender;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +22,8 @@ public class ValidateCodeBeanConfig {
     private SecurityProperties securityProperties;
 
     @Bean
-    @ConditionalOnMissingBean(name="imageCodeGenerator") // 不存在imageCodeGenerator的bean的时候才用下面的配置
-    public ValidateCodeGenerator imageCodeGenerator(){
+    @ConditionalOnMissingBean(name="imageValidateCodeGenerator") // 不存在imageCodeGenerator的bean的时候才用下面的配置
+    public ValidateCodeGenerator imageValidateCodeGenerator(){
         ImageCondeGenerator imageCondeGenerator = new ImageCondeGenerator();
         imageCondeGenerator.setSecurityProperties(securityProperties);
         return imageCondeGenerator;

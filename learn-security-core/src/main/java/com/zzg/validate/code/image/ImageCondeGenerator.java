@@ -1,7 +1,10 @@
-package com.zzg.validate.code;
+package com.zzg.validate.code.image;
 
 import com.zzg.properties.SecurityProperties;
+import com.zzg.validate.code.ValidateCodeGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.*;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.context.request.ServletWebRequest;
 

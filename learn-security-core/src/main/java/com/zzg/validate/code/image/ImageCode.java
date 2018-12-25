@@ -1,4 +1,6 @@
-package com.zzg.validate.code;
+package com.zzg.validate.code.image;
+
+import com.zzg.validate.code.ValidateCode;
 
 import java.awt.image.BufferedImage;
 import java.time.LocalDateTime;
